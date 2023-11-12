@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="container col-xxl-8 px-4 py-5">
+    
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        
+     
+        <img data-zoom-image="/media/{{ order_data.image }}" src="/media/{{order_data.image }}" width="500" height="500">
+       
+      </div>
+      <div class="col-lg-6">
+        <h6 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">{{ order_data.product}}</h6>
+        <p class="lead">{{ order_data.total }}</p>
+        
+        
+        <form action="/place_order/{{ order_data.id }}" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="{{ order_data.id }}">
+          <div class="form-group mb-3">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" name="address" aria-describedby="address" placeholder="Enter your address">
+          </div>
+          <div class="form-group mb-3">
+              <label for="pincode" class="form-label">Pincode</label>
+              <input type="text" class="form-control" id="pincode" name="pincode" aria-describedby="pincode" placeholder="Enter your pincode">
+          </div>
+          <button class="btn btn-primary btn-sm" type="submit">Order</button>
+      </form>
+      
+        
+      </div>
+  </div>
+</div>
+ {% endblock body %}
+

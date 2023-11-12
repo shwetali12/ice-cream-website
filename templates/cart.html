@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container col-xxl-8 px-4 py-5">
+    
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <h1>Shopping Cart</h1>
+      <hr>
+      {% for i in user.cart_set.all %}
+          
+          <div class="col-10 col-sm-8 col-lg-6">
+          
+              <h6 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">{{ i.product}}</h6>
+              <p>Price : {{ i.price }}</p>
+              <p>Quantity : {{ i.quantity }}</p>
+              <a type="submit" class="btn btn-primary" href="{% url 'remove_item' i.id %}">Remove</a>
+              <a type="submit" class="btn btn-primary" href="{% url 'view_order' i.id %}">Order</a>
+
+              
+
+
+
+          </div>      
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img data-zoom-image="/media/{{ i.image }}" src="/media/{{i.image }}" width="200" height="150">
+
+          </div>
+          
+          <hr>
+      {% endfor %}
+    </div>
+</div>
+ {% endblock body %}
+

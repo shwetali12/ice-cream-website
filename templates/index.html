@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body%}
+<!--carousel code-->
+<div class="container-fluid">
+    <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+           <img src="{% static '2.jpg' %}" class="d-block w-100" alt="..." style="height: 600px ;">
+           <div class="carousel-caption d-none d-md-block">
+            <h1>The Most Delicious Place On The Internet!</h1>
+            <p>Some representative aceholder content for the first slideThere's so much to explore, here at the home of ice cream.</p>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'ishan-seefromthesky-NhJX41giJFs-unsplash.jpg' %}" class="d-block w-100" alt="..."  style="height: 600px ;">
+            <div class="carousel-caption d-none d-md-block ">
+              <h1>The most delicious place on the Internet!</h1>
+              <p>Some representative placeholder content for the first slideThere's so much to explore, here at the home of ice cream.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'phil-hearing-B_pEC0rSb7o-unsplash.jpg' %}" class="d-block w-100" alt="..."  style="height: 600px ;">
+            <div class="carousel-caption d-none d-md-block text-white">
+              <h1>The most delicious place on the Internet!</h1>
+              <p>Some representative placeholder content for the first slideThere's so much to explore, here at the home of ice cream.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+
+<!--cart start-->
+<div class="container">
+  <div class="mt-4 py-3">
+    <h2 class="text-center fw-bold">Our Best Selling Products</h2>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'brenda-godinez-AAHdL8gp5b8-unsplash.jpg' %}" class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+          <h5 class="card-title">Chocolate</h5>
+          <p class="card-text">An ice cream loaded with a heavenly Chocolate</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'flavio-shibata-z_eoi3ppf5U-unsplash.jpg' %}" class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+          <h5 class="card-title">Malai</h5>
+          <p class="card-text">India’s most loved sweetmeat in its creamiest and tastiest avatar.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'spork-n-fork-aWBweuWlju4-unsplash.jpg' %}" class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+          <h5 class="card-title">Ladoo Ice-Creame</h5>
+          <p class="card-text">A desi sweet you can never say no to, loaded with Motichoor Ladoo</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'kelsey-curtis-G5ZenftPPOA-unsplash.jpg' %}" class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+          <h5 class="card-title">Gulab Jamun</h5>
+          <p class="card-text">India’s most loved dessert in a creamier avatar.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static '2.jpg' %}" class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+          <h5 class="card-title">Pista</h5>
+          <p class="card-text">India’s most loved  a creamier avatar.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static '3.jpg' %}" class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+          <h5 class="card-title">banana</h5>
+          <p class="card-text">An ice cream loaded with a heavenly Banana Ice-Creame.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ {% endblock body %}

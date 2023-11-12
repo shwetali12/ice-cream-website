@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Buying products</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Date</th>
+        <th scope="col">Pincode</th>
+        <th scope="col">Price</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in user.order_set.all %}
+      <tr>
+        <th scope="row">{{ i.id }}</th>
+        <td>{{ i.product.name }}</td>
+        <td>{{ i.address }}</td>
+        <td>{{ i.order_date }}</td>
+
+        <td>{{ i.pincode }}</td>
+        <td>{{ i.total }}</td>
+
+
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock body %}
